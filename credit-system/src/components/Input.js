@@ -2,7 +2,7 @@ import React from "react";
 import { Form } from "react-bootstrap";
 
 export default function Input(props) {
-  const { label, error, onChange, name, type } = props;
+  const { label, error, onChange, name, type ,placeholder} = props;
 
   return (
     <div>
@@ -13,8 +13,8 @@ export default function Input(props) {
           name={name}
           onChange={onChange}
           type={type}
+          placeholder = {placeholder}
         />
-        <div className="invalid-feedback">{error}</div>
       </Form.Group>
     </div>
   );
