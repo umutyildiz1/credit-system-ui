@@ -7,6 +7,12 @@ class CustomerService {
        axios.post("/api/customers/create",request,{headers})
         
     }
+    get(sid,token){
+        const headers= {'Authorization':`Bearer ${token}`}
+      return axios.get("/api/customers/"+sid,{headers})
+        
+    }
+
 
     
 }
